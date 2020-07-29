@@ -415,7 +415,9 @@
                 }
 
                 function cutPasteEvent() {
+                    var oldValue = $input.val();
                     setTimeout(function () {
+                        $input.val($input.val().replace(oldValue, ''));
                         mask();
                     }, 0);
                 }
